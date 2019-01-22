@@ -1,0 +1,32 @@
+<div class='container'>
+   <h1>Edit Recipe</h1>
+
+   <form (ngSubmit)='onSubmit()' #productForm='ngForm'>
+
+      <div class='form-group'>
+         <label for='name'>Naam :</label>
+         <input type='text' class='form-control' id='name' required
+            [(ngModel)]='model.name' name='name'>
+      </div>
+      <br />
+      <div class='form-group'>
+         <label for='calories'>Caloriën :</label>
+         <input type='text' class='form-control' id='calories' required
+            [(ngModel)]='model.calories' name='calories'>
+      </div>
+      <br />
+      <div class='form-group'>
+         <label for='ingredients'>Ingrediënten :</label>
+         <input type='text' class='form-control' id='ingredients' required
+            [(ngModel)]='model.ingredients' name='ingredients'>
+      </div>
+      <br />
+     <div class='form-group'>
+       <label for='time'>Benodigde tijd :</label>
+       <input type='text' class='form-control' id='time' required
+              [(ngModel)]='model.time' name='time'>
+     </div>
+     <br />
+      <button type='submit' class='btn btn-success' [disabled]='productForm.invalid'>Edit</button>
+   </form>
+</div>

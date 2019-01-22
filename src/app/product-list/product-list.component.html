@@ -1,0 +1,12 @@
+<div class = 'container'>
+   <h1>All Recipes</h1>
+   <ul>
+    <li *ngFor='let product of products' ng-click="sortBy('name')">
+      Naam : {{ product.name }}<br />
+      Caloriën : {{ product.calories }}<br />
+      Ingrediënten : {{ product.ingredients }}<br />
+      Benodigde tijd : {{ product.time }}<br />
+    </li>
+  </ul>
+
+</div>

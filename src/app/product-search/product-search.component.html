@@ -1,0 +1,21 @@
+<div class='container'>
+   <h1>Search Recipe</h1>
+
+   <form (ngSubmit)='onSubmit()'>
+
+      <div class='form-group' [formGroup]='search'>
+         <label for='name'>Naam :</label>&nbsp;&nbsp;
+         <input type='text' formControlName='name'>
+      </div>
+      <br />
+      <button type='submit' class='btn btn-success'>Search</button>
+
+   </form>
+   <br /><br />
+   <h2> Resultaat</h2>
+   <label>Naam :&nbsp;</label>{{ product.name }}<br />
+   <label>Caloriën :&nbsp;</label>{{ product.calories }}<br />
+   <label>Ingrediënten :&nbsp;</label>{{ product.ingredients }}<br />
+  <label>Benodigde tijd :&nbsp;</label>{{ product.time }}
+
+</div>
